@@ -1,0 +1,61 @@
+import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { SITE } from '@/lib/data';
+
+const inter = Inter({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: SITE.title,
+    template: `%s · ${SITE.name}`,
+  },
+  description: SITE.description,
+  keywords: [
+    'диплом IT', 'курсовая на заказ', 'дипломный проект программирование',
+    'курсовая по информатике', 'разработка под ключ', 'IT-студенты',
+    'веб-разработка', 'мобильная разработка', 'машинное обучение диплом',
+  ],
+  openGraph: {
+    title: SITE.title,
+    description: SITE.description,
+    type: 'website',
+    locale: 'ru_RU',
+    url: SITE.url,
+    siteName: SITE.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE.title,
+    description: SITE.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#ffffff',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="ru" className={inter.variable}>
+      <body className="min-h-screen antialiased">
+        {children}
+      </body>
+    </html>
+  );
+}

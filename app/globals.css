@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-900 font-sans;
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, rgba(99, 102, 241, 0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(217, 70, 239, 0.08), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Selection */
+::selection {
+  background: rgba(99, 102, 241, 0.25);
+  color: #1e1b4b;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(120deg, #4f46e5 0%, #7c3aed 40%, #d946ef 100%);
+  }
+
+  .border-gradient {
+    position: relative;
+    background-clip: padding-box;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+  }
+
+  .dot-pattern {
+    background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .mask-fade-edges {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+}
