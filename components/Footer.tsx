@@ -8,8 +8,8 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 lg:grid-cols-3 lg:px-8">
         <div>
           <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 text-white shadow-glow">
-              <span className="font-bold text-sm">{'</>'}</span>
+            <span className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl shadow-glow">
+              <img src="/icon.svg" alt="Логотип" className="h-9 w-9" />
             </span>
             <span className="text-base font-semibold tracking-tight text-slate-900">
               {SITE.name}

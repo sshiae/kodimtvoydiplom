@@ -29,8 +29,8 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         <Link href="/" className="group flex items-center gap-2">
-          <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 text-white shadow-glow">
-            <span className="font-bold text-sm">{'</>'}</span>
+          <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-xl shadow-glow">
+            <img src="/icon.svg" alt="Логотип" className="h-9 w-9" />
           </span>
           <span className="text-base font-semibold tracking-tight text-slate-900">
             {SITE.name}
