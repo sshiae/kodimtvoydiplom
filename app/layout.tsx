@@ -36,8 +36,11 @@ export const metadata: Metadata = {
   },
   category: 'education',
   icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.ico',
     apple: '/icon.svg',
   },
 };
