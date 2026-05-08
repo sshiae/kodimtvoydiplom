@@ -102,7 +102,7 @@ export function Hero() {
             delay={0.55}
           />
           <FloatingStat
-            className="bottom-3 right-3 sm:-bottom-6 sm:-right-6"
+            className="bottom-14 right-3 sm:bottom-8 sm:-right-6"
             icon={<GitBranch className="h-4 w-4 text-indigo-600" />}
             label="GitHub"
             value="приватный"

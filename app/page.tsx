@@ -8,8 +8,26 @@ import { Team } from '@/components/Team';
 import { FAQ } from '@/components/FAQ';
 import { Contacts } from '@/components/Contacts';
 import { Footer } from '@/components/Footer';
+import { SITE } from '@/lib/data';
 
 export default function HomePage() {
+  const organizationLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE.name,
+    description: SITE.description,
+    url: SITE.url,
+    sameAs: [SITE.primaryContact],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        url: SITE.primaryContact,
+        availableLanguage: ['ru'],
+      },
+    ],
+  };
+
   return (
     <>
       <Navbar />
@@ -23,6 +41,10 @@ export default function HomePage() {
         <FAQ />
         <Contacts />
       </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+      />
       <Footer />
     </>
   );

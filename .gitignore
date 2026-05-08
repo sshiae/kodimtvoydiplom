@@ -6,3 +6,4 @@ out
 .env*
 .vscode
 .idea
+.playwright-mcp
