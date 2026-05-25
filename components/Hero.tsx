@@ -39,13 +39,18 @@ export function Hero() {
             Курсовые и дипломы,
             <br className="hidden sm:block" />
             которые{' '}
-            <span className="text-gradient">сдаются с первого раза</span>
+            <span className="text-gradient">сдаются без пересдач</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-balance text-base text-slate-600 md:text-lg">
             Разрабатываем уникальные приложения под ваше ТЗ и методичку:
             веб, мобильные, десктоп, ML, боты и игры. Передаём исходники,
             оформляем документацию и сопровождаем до защиты.
+          </p>
+
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-500 md:text-base">
+            Стоимость — <span className="font-semibold text-slate-700">{SITE.minPriceLabel}</span>.
+            Итоговая цена договорная и зависит от требований вуза, объёма и сроков.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

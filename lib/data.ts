@@ -42,13 +42,14 @@ export type TeamMember = {
   name: string;
   role: string;
   description: string;
+  achievements: string[];
   highlights: string[];
   contacts: {
     telegram: string;
     vk: string;
     email: string;
   };
-  avatar: string;
+  photo: string;
   initials: string;
 };
 
@@ -69,8 +70,10 @@ export const SITE = {
   title: 'Курсовые и дипломные проекты для IT-специальностей',
   description:
     'Помогаем студентам с IT-курсовыми и дипломами: делаем проекты под требования вуза, передаём исходники и сопровождаем до самой защиты.',
-  primaryContact: 'https://vk.com/club238456733',
+  primaryContact: 'https://vk.com/kodimtvoydiplom',
   url: 'http://localhost:3000',
+  minPrice: 5000,
+  minPriceLabel: 'от 5 000 ₽',
 };
 
 export const SERVICES: Service[] = [
@@ -204,6 +207,13 @@ export const TEAM: TeamMember[] = [
     role: 'Fullstack-разработчик',
     description:
       'Обычно беру на себя сложные и запутанные темы. Помогаю собрать проект в понятную систему: от архитектуры и базы данных до финальной подготовки к защите, чтобы вы могли уверенно всё объяснить комиссии.',
+    achievements: [
+      'Молодой учёный',
+      'Победитель научной конференции «Молодые исследователи — регионам»',
+      'Победитель чемпионата «Профессионалы»',
+      'Призёр чемпионата «Арктек дата»',
+      'Призёр хакатона IT_One CAREER HACKATHON',
+    ],
     highlights: [
       'Web (React / Next.js / Node.js)',
       'Backend и SQL',
@@ -214,14 +224,17 @@ export const TEAM: TeamMember[] = [
       vk: 'https://vk.com/shiae',
       email: 'mailto:sven557929@mail.ru',
     },
-    avatar: 'А',
+    photo: '/team/shirkunov.jpg',
     initials: 'АШ',
   },
   {
     name: 'Ушаков Иван Андреевич',
     role: 'Fullstack-разработчик',
     description:
-      'Отвечаю за визуальную часть, удобство и аккуратную подачу проекта. Также занимаюсь технической частью: мобильными и desktop-решениями, автоматизацией и ML, чтобы проект выглядел убедительно и хорошо показывал реальную проделанную работу.',
+      'Отвечаю за визуальную часть, удобство и аккуратную подачу проекта. Также занимаюсь технической частью: мобильными и desktop-решениями, автоматизацией и ML.',
+    achievements: [
+      'Призёр хакатона IT_One CAREER HACKATHON',
+    ],
     highlights: [
       'Frontend и UX-подача',
       'Mobile и desktop-решения',
@@ -232,7 +245,7 @@ export const TEAM: TeamMember[] = [
       vk: 'https://vk.com/1vanish2',
       email: 'mailto:vancik1024@gmail.com',
     },
-    avatar: 'И',
+    photo: '/team/ushakov.jpg',
     initials: 'УИ',
   },
 ];
@@ -260,7 +273,7 @@ export const FAQ: FAQItem[] = [
   },
   {
     q: 'Сколько стоит ваша работа?',
-    a: 'Стоимость договорная и обсуждается индивидуально — она зависит от объёма, темы, сроков и требований вуза. Напишите нам во ВКонтакте, и мы пришлём оценку в течение часа.',
+    a: 'Минимальная стоимость — от 5 000 ₽. Итоговая цена договорная и зависит от объёма, темы, сроков и требований вуза. Напишите нам во ВКонтакте — пришлём оценку в течение часа.',
   },
   {
     q: 'Как происходит оплата?',

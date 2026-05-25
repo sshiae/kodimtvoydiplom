@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Section, SectionHeader } from './ui/Section';
 import { TEAM, ALL_CONTACT_LINKS } from '@/lib/data';
@@ -11,7 +12,7 @@ export function Team() {
         eyebrow="Команда"
         title={
           <>
-            Двое разработчиков —{' '}
+            Прямой контакт с разработчиками —{' '}
             <span className="text-gradient">никаких посредников</span>
           </>
         }
@@ -33,8 +34,14 @@ export function Team() {
               <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-gradient-to-br from-indigo-200/50 via-violet-200/40 to-fuchsia-200/50 blur-3xl" />
 
               <div className="relative flex flex-col items-start gap-5 sm:flex-row sm:items-center">
-                <div className="grid h-20 w-20 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 text-2xl font-bold text-white shadow-glow ring-4 ring-white">
-                  {member.initials}
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl shadow-glow ring-4 ring-white">
+                  <Image
+                    src={member.photo}
+                    alt={member.name}
+                    fill
+                    sizes="80px"
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-slate-900 md:text-2xl">
@@ -49,6 +56,17 @@ export function Team() {
               <p className="relative mt-5 text-[15px] leading-relaxed text-slate-700">
                 {member.description}
               </p>
+
+              {member.achievements.length > 0 ? (
+                <ul className="relative mt-4 space-y-1.5 text-sm text-slate-600">
+                  {member.achievements.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-500" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
 
               <ul className="relative mt-5 flex min-h-[72px] flex-wrap content-start gap-1.5">
                 {member.highlights.map((h) => (

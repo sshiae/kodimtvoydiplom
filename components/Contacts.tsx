@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Send, Clock, Sparkles } from 'lucide-react';
 import { Section } from './ui/Section';
@@ -42,8 +43,10 @@ export function Contacts() {
               </span>
             </h2>
             <p className="mt-4 max-w-xl text-base text-slate-300">
-              Стоимость договорная и обсуждается индивидуально. Чем больше
-              деталей о требованиях вуза вы пришлёте, тем точнее будет оценка.
+              Минимальная стоимость —{' '}
+              <span className="font-semibold text-white">{SITE.minPriceLabel}</span>.
+              Итоговая цена договорная и зависит от требований вуза, объёма и сроков.
+              Чем больше деталей вы пришлёте, тем точнее будет оценка.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -71,8 +74,14 @@ export function Contacts() {
                   className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-indigo-500 via-violet-500 to-fuchsia-500 text-sm font-bold text-white">
-                      {member.initials}
+                    <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-xl ring-2 ring-white/20">
+                      <Image
+                        src={member.photo}
+                        alt={member.name}
+                        fill
+                        sizes="44px"
+                        className="object-cover"
+                      />
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-white">
