@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MessageCircleQuote, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
 import { Section, SectionHeader } from './ui/Section';
 import type { Review } from '@/lib/reviews';
 import { SITE } from '@/lib/data';
@@ -81,7 +81,7 @@ export function Reviews({ reviews }: ReviewsProps) {
           className="mx-auto mt-14 max-w-2xl rounded-3xl border border-dashed border-slate-300 bg-white/80 px-8 py-12 text-center shadow-soft"
         >
           <div className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-indigo-50 to-fuchsia-50 text-indigo-600">
-            <MessageCircleQuote className="h-7 w-7" strokeWidth={2} />
+            <Quote className="h-7 w-7" strokeWidth={2} />
           </div>
           <p className="mt-5 text-lg font-medium text-slate-800">
             Отзывов пока что нет, Ваш может быть первым!
