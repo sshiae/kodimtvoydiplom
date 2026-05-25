@@ -204,7 +204,7 @@ export const PROCESS: ProcessStep[] = [
 export const TEAM: TeamMember[] = [
   {
     name: 'Ширкунов Артём Евгеньевич',
-    role: 'Fullstack-разработчик',
+    role: 'Fullstack-разработчик, Senior',
     description:
       'Обычно беру на себя сложные и запутанные темы. Помогаю собрать проект в понятную систему: от архитектуры и базы данных до финальной подготовки к защите, чтобы вы могли уверенно всё объяснить комиссии.',
     achievements: [
@@ -229,11 +229,14 @@ export const TEAM: TeamMember[] = [
   },
   {
     name: 'Ушаков Иван Андреевич',
-    role: 'Fullstack-разработчик',
+    role: 'Fullstack-разработчик, Senior',
     description:
       'Отвечаю за визуальную часть, удобство и аккуратную подачу проекта. Также занимаюсь технической частью: мобильными и desktop-решениями, автоматизацией и ML.',
     achievements: [
       'Призёр хакатона IT_One CAREER HACKATHON',
+      'Двукратный призёр геймтона DatsTeam',
+      'Призёр Game Dev Синеус хакатона',
+      'Призёр чемпионата Yandex Cup',
     ],
     highlights: [
       'Frontend и UX-подача',
@@ -315,6 +318,7 @@ export const NAV_LINKS = [
   { href: '#process', label: 'Как работаем' },
   { href: '#why', label: 'Почему мы' },
   { href: '#team', label: 'Команда' },
+  { href: '#reviews', label: 'Отзывы' },
   { href: '#faq', label: 'FAQ' },
   { href: '#contacts', label: 'Контакты' },
 ];

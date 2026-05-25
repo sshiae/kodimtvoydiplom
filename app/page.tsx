@@ -5,12 +5,15 @@ import { Technologies } from '@/components/Technologies';
 import { Process } from '@/components/Process';
 import { WhyUs } from '@/components/WhyUs';
 import { Team } from '@/components/Team';
+import { Reviews } from '@/components/Reviews';
 import { FAQ } from '@/components/FAQ';
 import { Contacts } from '@/components/Contacts';
 import { Footer } from '@/components/Footer';
 import { SITE } from '@/lib/data';
+import { getReviews } from '@/lib/reviews';
 
 export default function HomePage() {
+  const reviews = getReviews();
   const organizationLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -38,6 +41,7 @@ export default function HomePage() {
         <Process />
         <WhyUs />
         <Team />
+        <Reviews reviews={reviews} />
         <FAQ />
         <Contacts />
       </main>

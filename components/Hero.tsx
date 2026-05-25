@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import {
   Send,
-  Sparkles,
   CheckCircle2,
   Code2,
   GitBranch,
@@ -30,12 +29,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3.5 py-1.5 text-xs font-medium text-slate-700 shadow-soft backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-indigo-600" />
-            Команда практикующих разработчиков · только IT-направления
-          </div>
-
-          <h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl">
             Курсовые и дипломы,
             <br className="hidden sm:block" />
             которые{' '}
@@ -46,11 +40,6 @@ export function Hero() {
             Разрабатываем уникальные приложения под ваше ТЗ и методичку:
             веб, мобильные, десктоп, ML, боты и игры. Передаём исходники,
             оформляем документацию и сопровождаем до защиты.
-          </p>
-
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-500 md:text-base">
-            Стоимость — <span className="font-semibold text-slate-700">{SITE.minPriceLabel}</span>.
-            Итоговая цена договорная и зависит от требований вуза, объёма и сроков.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
