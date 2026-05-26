@@ -33,11 +33,11 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbar />
-      <div className="border-b border-amber-200 bg-amber-50 px-4 py-2.5 text-center text-xs text-amber-800">
+      <div className="fixed inset-x-0 top-0 z-[60] bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 px-4 py-2 text-center text-xs text-white/90">
         Мы продаём не готовую работу, а{' '}
-        <strong>помощь опытных IT-экспертов</strong> в её написании. Все материалы предназначены для самостоятельного использования студентом.
+        <strong className="text-white">помощь опытных IT-экспертов</strong> в её написании. Все материалы предназначены для самостоятельного использования студентом.
       </div>
+      <Navbar />
       <main className="overflow-x-clip">
         <Hero />
         <Services />
