@@ -1,21 +1,10 @@
-import { Send } from 'lucide-react';
+import { Send, Info } from 'lucide-react';
 import { SITE, NAV_LINKS } from '@/lib/data';
 
 export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="relative mt-20 border-t border-slate-200 bg-white">
-      <div className="border-t border-slate-200/80 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
-          <p className="text-xs font-medium text-slate-700 mb-2">
-            Важно: мы продаём не готовую дипломную или курсовую работу, а помощь опытных IT-экспертов в её подготовке.
-          </p>
-          <p className="text-xs text-slate-500">
-            Все материалы, созданные в ходе нашего сотрудничества, предназначены исключительно для самостоятельного использования студентом в качестве учебного пособия и образца для написания собственной работы.
-          </p>
-        </div>
-      </div>
-      
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 lg:grid-cols-3 lg:px-8">
         <div>
           <div className="flex items-center gap-2">
@@ -66,6 +55,24 @@ export function Footer() {
           >
             <Send className="h-4 w-4" /> Написать в VK
           </a>
+        </div>
+      </div>
+      
+      <div className="border-t border-slate-100 bg-amber-50/60">
+        <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
+          <div className="flex items-start gap-3 rounded-xl border border-amber-200/80 bg-white/80 p-4 shadow-sm backdrop-blur-sm">
+            <Info className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-600" />
+            <p className="text-sm leading-relaxed text-amber-900">
+              Мы продаём не готовую дипломную или курсовую работу, а{' '}
+              <strong className="font-semibold text-amber-950">
+                помощь опытных IT-экспертов
+              </strong>{' '}
+              в её подготовке. Все материалы, созданные в ходе нашего
+              сотрудничества, предназначены исключительно для самостоятельного
+              использования студентом в качестве учебного пособия и образца для
+              написания собственной работы.
+            </p>
+          </div>
         </div>
       </div>
 
