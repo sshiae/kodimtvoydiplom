@@ -5,6 +5,17 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="relative mt-20 border-t border-slate-200 bg-white">
+      <div className="border-t border-slate-200/80 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+          <p className="text-xs font-medium text-slate-700 mb-2">
+            Важно: мы продаём не готовую дипломную или курсовую работу, а помощь опытных IT-экспертов в её подготовке.
+          </p>
+          <p className="text-xs text-slate-500">
+            Все материалы, созданные в ходе нашего сотрудничества, предназначены исключительно для самостоятельного использования студентом в качестве учебного пособия и образца для написания собственной работы.
+          </p>
+        </div>
+      </div>
+      
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 lg:grid-cols-3 lg:px-8">
         <div>
           <div className="flex items-center gap-2">
@@ -55,30 +66,6 @@ export function Footer() {
           >
             <Send className="h-4 w-4" /> Написать в VK
           </a>
-        </div>
-      </div>
-
-      {/* Дисклеймер — требование ФЗ «О рекламе» ст. 7 п. 10 */}
-      <div className="border-t border-slate-200/80 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
-          <p className="text-xs font-medium text-slate-700 mb-2">
-            Важно: мы продаём не готовую дипломную или курсовую работу, а помощь опытных IT-экспертов в её подготовке.
-          </p>
-          <p className="text-xs text-slate-500">
-            Все материалы, созданные в ходе нашего сотрудничества, предназначены исключительно для самостоятельного использования студентом в качестве учебного пособия и образца для написания собственной работы.
-          </p>
-        </div>
-      </div>
-
-      {/* SEO-текстовый блок */}
-      <div className="border-t border-slate-200/80 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
-          <h2 className="text-base font-semibold text-slate-900 mb-3">
-            Помощь в написании дипломной работы
-          </h2>
-          <p className="text-sm text-slate-600 max-w-4xl">
-            Помощь в написании дипломной работы — это сопровождение студента опытными экспертами на всех этапах подготовки выпускной квалификационной работы. У нас вы получаете не «готовый диплом», а профессиональную поддержку специалистов, которые помогают разобраться в теме, соблюсти требования вуза и уверенно подготовиться к защите. Мы работаем рядом с вами — от выбора темы и составления технического задания до финального кода, пояснительной записки и презентации. Каждый шаг согласуется с вами, чтобы вы понимали свой проект и могли уверенно ответить на любой вопрос комиссии.
-          </p>
         </div>
       </div>
 
