@@ -11,10 +11,10 @@ export function Services() {
         eyebrow="Что мы делаем"
         title={
           <>
-            Любые <span className="text-gradient">IT-направления</span> под ключ
+            Помощь по любым <span className="text-gradient">IT-направлениям</span>
           </>
         }
-        description="От веб-приложений и мобильных проектов до машинного обучения, ботов и игр. Подбираем стек под требования вашего вуза."
+        description="Веб-приложения, мобильные проекты, машинное обучение, боты и игры. Помогаем разобраться в теме и подобрать стек под требования вашего вуза."
       />
 
       <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

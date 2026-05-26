@@ -34,6 +34,10 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
+      <div className="border-b border-amber-200 bg-amber-50 px-4 py-2.5 text-center text-xs text-amber-800">
+        Мы продаём не готовую работу, а{' '}
+        <strong>помощь опытных IT-экспертов</strong> в её написании. Все материалы предназначены для самостоятельного использования студентом.
+      </div>
       <main className="overflow-x-clip">
         <Hero />
         <Services />

@@ -30,16 +30,16 @@ export function Hero() {
           className="mx-auto max-w-3xl text-center"
         >
           <h1 className="text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl">
-            Курсовые и дипломы,
+            Помощь с дипломом и курсовой —
             <br className="hidden sm:block" />
-            которые{' '}
-            <span className="text-gradient">сдаются без пересдач</span>
+            от первой строки кода{' '}
+            <span className="text-gradient">до успешной защиты</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-balance text-base text-slate-600 md:text-lg">
-            Разрабатываем уникальные приложения под ваше ТЗ и методичку:
-            веб, мобильные, десктоп, ML, боты и игры. Передаём исходники,
-            оформляем документацию и сопровождаем до защиты.
+            Помогаем студентам разобраться в теме и подготовить уникальный IT-проект
+            по требованиям вашего вуза: веб, мобильные, десктоп, ML, боты и игры.
+            Передаём исходники, оформляем документацию и сопровождаем до защиты.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
