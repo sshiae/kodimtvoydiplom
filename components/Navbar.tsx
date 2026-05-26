@@ -21,7 +21,7 @@ export function Navbar() {
   return (
     <header
       className={clsx(
-        'fixed inset-x-0 top-0 z-50 transition-all duration-300',
+        'fixed inset-x-0 top-8 z-50 transition-all duration-300',
         scrolled
           ? 'border-b border-slate-200/60 bg-white/80 backdrop-blur-xl'
           : 'bg-transparent',
