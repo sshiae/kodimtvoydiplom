@@ -1,6 +1,6 @@
 'use client';
 
-import { Send, Info } from 'lucide-react';
+import { Send, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SITE, NAV_LINKS } from '@/lib/data';
 
@@ -61,40 +61,33 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-slate-200/80">
-        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+      <div className="border-t border-slate-200/60 bg-slate-50/50">
+        <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-soft transition hover:border-slate-300"
+            className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between"
           >
-            <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-to-br from-indigo-200/40 via-violet-200/30 to-fuchsia-200/40 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
-
-            <div className="relative flex items-start gap-4">
-              <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 text-white shadow-glow">
-                <Info className="h-5 w-5" />
+            <div className="flex items-start gap-3 max-w-2xl">
+              <div className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-gradient-to-br from-indigo-50 to-violet-50 text-indigo-500 ring-1 ring-indigo-100/80 shadow-sm">
+                <ShieldCheck className="h-4 w-4" />
               </div>
-              <p className="text-sm leading-relaxed text-slate-700">
+              <p className="text-[13px] leading-relaxed text-slate-500">
                 Мы продаём не готовую дипломную или курсовую работу, а{' '}
-                <strong className="font-semibold text-slate-900">
-                  помощь опытных IT-экспертов
-                </strong>{' '}
-                в её подготовке. Все материалы, созданные в ходе нашего
-                сотрудничества, предназначены исключительно для самостоятельного
-                использования студентом в качестве учебного пособия и образца для
-                написания собственной работы.
+                <span className="font-medium text-slate-700">помощь опытных IT-экспертов</span>{' '}
+                в её подготовке. Все материалы, созданные в ходе нашего сотрудничества, 
+                предназначены исключительно для самостоятельного использования студентом 
+                в качестве учебного пособия и образца для написания собственной работы.
               </p>
             </div>
+            
+            <div className="flex flex-col gap-1 text-xs text-slate-400 md:items-end md:text-right shrink-0">
+              <span className="font-medium text-slate-500">© {year} {SITE.name}</span>
+              <span>Сделано на Next.js, TailwindCSS и Framer Motion.</span>
+            </div>
           </motion.div>
-        </div>
-      </div>
-
-      <div className="border-t border-slate-200/80">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-2 px-6 py-6 text-xs text-slate-500 sm:flex-row sm:items-center lg:px-8">
-          <span>© {year} {SITE.name}. Все права защищены.</span>
-          <span>Сделано на Next.js, TailwindCSS и Framer Motion.</span>
         </div>
       </div>
     </footer>
