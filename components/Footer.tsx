@@ -1,4 +1,7 @@
+'use client';
+
 import { Send, Info } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { SITE, NAV_LINKS } from '@/lib/data';
 
 export function Footer() {
@@ -57,31 +60,41 @@ export function Footer() {
           </a>
         </div>
       </div>
-      
-      <div className="border-t border-slate-100 bg-amber-50/60">
-        <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
-          <div className="flex items-start gap-3 rounded-xl border border-amber-200/80 bg-white/80 p-4 shadow-sm backdrop-blur-sm">
-            <Info className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-600" />
-            <p className="text-sm leading-relaxed text-amber-900">
-              Мы продаём не готовую дипломную или курсовую работу, а{' '}
-              <strong className="font-semibold text-amber-950">
-                помощь опытных IT-экспертов
-              </strong>{' '}
-              в её подготовке. Все материалы, созданные в ходе нашего
-              сотрудничества, предназначены исключительно для самостоятельного
-              использования студентом в качестве учебного пособия и образца для
-              написания собственной работы.
-            </p>
-          </div>
+
+      <div className="border-t border-slate-200/80">
+        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-soft transition hover:border-slate-300"
+          >
+            <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-to-br from-indigo-200/40 via-violet-200/30 to-fuchsia-200/40 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
+
+            <div className="relative flex items-start gap-4">
+              <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 text-white shadow-glow">
+                <Info className="h-5 w-5" />
+              </div>
+              <p className="text-sm leading-relaxed text-slate-700">
+                Мы продаём не готовую дипломную или курсовую работу, а{' '}
+                <strong className="font-semibold text-slate-900">
+                  помощь опытных IT-экспертов
+                </strong>{' '}
+                в её подготовке. Все материалы, созданные в ходе нашего
+                сотрудничества, предназначены исключительно для самостоятельного
+                использования студентом в качестве учебного пособия и образца для
+                написания собственной работы.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
 
       <div className="border-t border-slate-200/80">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-2 px-6 py-6 text-xs text-slate-500 sm:flex-row sm:items-center lg:px-8">
           <span>© {year} {SITE.name}. Все права защищены.</span>
-          <span>
-            Сделано на Next.js, TailwindCSS и Framer Motion.
-          </span>
+          <span>Сделано на Next.js, TailwindCSS и Framer Motion.</span>
         </div>
       </div>
     </footer>
