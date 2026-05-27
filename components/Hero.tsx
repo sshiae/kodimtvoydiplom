@@ -37,9 +37,11 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-balance text-base text-slate-600 md:text-lg">
-            Помогаем студентам разобраться в теме и подготовить уникальный IT-проект
-            по требованиям вашего вуза: веб, мобильные, десктоп, ML, боты и игры.
-            Передаём исходники, оформляем документацию и сопровождаем до защиты.
+            Помогаем студентам разобраться в теме и разработать проект по требованиям
+            вашего вуза: веб, мобильные, десктоп, ML, боты и игры. Вы получаете
+            не просто код, а понятный пример профессиональной разработки, который
+            сами адаптируете и защищаете. Мы сопровождаем вас на всём пути
+            самостоятельной подготовки.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -56,14 +58,14 @@ export function Hero() {
             </LinkButton>
           </div>
 
-          <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-slate-600">
+          <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-600 sm:-mx-10 sm:gap-x-6 lg:-mx-16">
             {[
-              'Уникальный код',
-              'Исходники на GitHub',
+              'Индивидуальный разбор темы',
+              'Понятный пример на GitHub',
               'Сопровождение до защиты',
-              'Бесплатные доработки',
+              'Поддержка на доработках',
             ].map((item) => (
-              <li key={item} className="inline-flex items-center gap-1.5">
+              <li key={item} className="inline-flex items-center gap-1.5 whitespace-nowrap">
                 <CheckCircle2 className="h-4 w-4 text-emerald-500" />
                 {item}
               </li>
@@ -90,9 +92,9 @@ export function Hero() {
           <FloatingStat
             className="right-2 -top-4 sm:-right-6 sm:-top-6"
             icon={<Activity className="h-4 w-4 text-emerald-500" />}
-            label="Срок"
-            value="от 5 дней"
-            sub="курсовые"
+            label="Поддержка"
+            value="Сопровождение"
+            sub="до защиты"
             delay={0.55}
           />
           <FloatingStat
